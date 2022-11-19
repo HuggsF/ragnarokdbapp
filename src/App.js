@@ -1,19 +1,20 @@
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter as Router,
+  Routes,
   Route,
 } from "react-router-dom";
 
+import { Home } from './Pages/home'
+import { Login } from './Pages/login'
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          RagnarokdatabaseApp
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
   );
 }
 
